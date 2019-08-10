@@ -1,0 +1,60 @@
+'scopeName': 'source.kickassc64'
+'name': 'Kick Assembler for C64'
+'fileTypes': ['asm']
+
+'patterns': [
+	{
+		'match': '(//.*)'
+		'name': 'comment.double-slash.kickassc64'
+	},
+	{
+	    'begin': '/\\*'
+	    'end': '\\*/'
+	    'name': 'comment.block.kickassc64'
+	},
+	{
+		'match': '\\b(adc|and|asl|bcc|bcs|beq|bit|bmi|bne|bpl|brk|bvc|bvs|clc|cld|cli|clv|cmp|cpx|cpy|dec|dex|dey|eor|inc|inx|iny|jmp|jsr|lda|ldx|ldy|lsr|nop|ora|pha|php|pla|plp|rol|ror|rti|rts|sbc|sec|sed|sei|sta|stx|sty|tax|tay|tsx|txa|txs|tya)\\b'
+		'name': 'keyword.control.kickassc64'
+	},
+	{
+		'match': '\\b(anc|ane|arr|asr|dcp|isb|jam|lae|lax|lxa|rla|rra|sax|sbx|sha|shs|shx|shy|slo|sre)\\b'
+		'name': 'illegal.kickassc64'
+	},
+	{
+	    'match': '(!?[a-zA-Z_\\.][a-zA-Z0-9_\\.]*[:\\+\\-])|(!:)|(!\\+)|(!\\-)'
+	    'name': 'variable.kickassc64'
+	},
+	{
+	    'match': '(\\$[0-9a-f]+)'
+	    'name': 'constant.numeric.kickassc64'
+	},
+	{
+	    'match': '(\\%[0-1]+)'
+	    'name': 'constant.numeric.kickassc64'
+	},
+	{
+	    'match': '\\b([0-9]+)\\b'
+	    'name': 'constant.numeric.kickassc64'
+	},
+	{
+		'match': '(\\.disk|\\.segment|\\.import|binary|\\.label|\\.var|\\.const|\\.namespace|\\.enum)\\b'
+		'name': 'keyword.control.kickassc64'
+	},
+	{
+		'match': '(\\.byte|\\.text|\\.char|\\.shift|\\.null|\\.rta|\\.word|\\.int|\\.offs|\\.macro|\\.endm|\\.for|\\.next|\\.if|\\.ifne|\\.ifeq|\\.ifpl|\\.ifmi|\\.else|\\.elsif|\\.fi|\\.endif|\\.rept|\\.include|\\.binary|\\.page|\\.endp|\\.logical|\\.here|\\.error|\\.warn|\\.cerror|\\.cwarn|\\.proc|\\.pend|\\.fill|\\.align|\\.enc|\\.cpu)\\b'
+		'name': 'keyword.control.kickassc64'
+	},
+	{
+		'match': '(BLACK|WHITE|RED|CYAN|PURPLE|GREEN|BLUE|YELLOW|ORANGE|BROWN|LIGHT_RED|DARK_GRAY|DARK_GREY|GRAY|GREY|LIGHT_GREEN|LIGHT_BLUE|LIGHT_GRAY|LIGHT_GREY)\\b'
+		'name': 'keyword.other.kickassc64'
+	},
+	{
+		'match': '(#import)\\b'
+		'name': 'keyword.other.kickassc64'
+	},
+	{
+	    'begin': '\"'
+	    'end': '\"'
+	    'name': 'string.quoted.double.kickassc64'
+	}
+]
