@@ -37,7 +37,7 @@
 	    'name': 'constant.numeric.kickassc64'
 	},
 	{
-		'match': '(\\.disk|\\.segment|\\.import|binary|\\.label|\\.var|\\.const|\\.namespace|\\.enum|\\.print)\\b'
+		'match': '(\\.disk|\\.segment|\\.import|binary|\\.label|\\.var|\\.const|\\.namespace|\\.enum|\\.print|\\.assert)\\b'
 		'name': 'keyword.control.kickassc64'
 	},
 	{
