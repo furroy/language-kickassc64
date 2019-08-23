@@ -37,11 +37,11 @@
 	    'name': 'constant.numeric.kickassc64'
 	},
 	{
-		'match': '(\\.disk|\\.segment|\\.import|binary|\\.label|\\.var|\\.const|\\.namespace|\\.enum|\\.print|\\.assert)\\b'
+		'match': '(\\.disk|\\.segment|\\.import|binary|\\.label|\\.var|\\.const|\\.namespace|\\.enum|\\.print|\\.assert|\\.zp|\\.pc|\\.eval|\\.function)\\b'
 		'name': 'keyword.control.kickassc64'
 	},
 	{
-		'match': '(\\.byte|\\.text|\\.char|\\.shift|\\.null|\\.rta|\\.word|\\.int|\\.offs|\\.macro|\\.endm|\\.for|\\.next|\\.if|\\.ifne|\\.ifeq|\\.ifpl|\\.ifmi|\\.else|\\.elsif|\\.fi|\\.endif|\\.rept|\\.include|\\.binary|\\.page|\\.endp|\\.logical|\\.here|\\.error|\\.warn|\\.cerror|\\.cwarn|\\.proc|\\.pend|\\.fill|\\.align|\\.enc|\\.cpu)\\b'
+		'match': '(\\.byte|\\.text|\\.char|\\.shift|\\.null|\\.rta|\\.word|\\.int|\\.offs|\\.macro|\\.endm|\\.for|\\.next|\\.if|\\.ifne|\\.ifeq|\\.ifpl|\\.ifmi|else|\\.elsif|\\.fi|\\.endif|\\.return|var|\\.rept|\\.include|\\.binary|\\.page|\\.endp|\\.logical|\\.here|\\.error|\\.warn|\\.cerror|\\.cwarn|\\.proc|\\.pend|\\.fill|\\.align|\\.enc|\\.cpu)\\b'
 		'name': 'keyword.control.kickassc64'
 	},
 	{
@@ -49,7 +49,7 @@
 		'name': 'keyword.other.kickassc64'
 	},
 	{
-		'match': '(#import)\\b'
+		'match': '(#import|#if|#else|#endif|#define|#undef|#elif|#importif|#importonce)\\b'
 		'name': 'keyword.other.kickassc64'
 	},
 	{
