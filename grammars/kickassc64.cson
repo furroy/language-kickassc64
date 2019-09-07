@@ -41,7 +41,7 @@
 		'name': 'keyword.control.kickassc64'
 	},
 	{
-		'match': '(\\.byte|\\.text|\\.char|\\.shift|\\.null|\\.rta|\\.word|\\.int|\\.offs|\\.macro|\\.endm|\\.for|\\.next|\\.if|\\.ifne|\\.ifeq|\\.ifpl|\\.ifmi|else|\\.elsif|\\.fi|\\.endif|\\.return|var|\\.rept|\\.include|\\.binary|\\.page|\\.endp|\\.logical|\\.here|\\.error|\\.warn|\\.cerror|\\.cwarn|\\.proc|\\.pend|\\.fill|\\.align|\\.enc|\\.cpu)\\b'
+		'match': '(\\.byte|\\.text|\\.char|\\.shift|\\.null|\\.rta|\\.word|\\.int|\\.offs|\\.macro|\\.endm|\\.for|\\.next|\\.if|(?<![.])else|\\.return|var|\\.rept|\\.include|\\.binary|\\.page|\\.endp|\\.logical|\\.here|\\.error|\\.errorif|\\.warn|\\.cerror|\\.cwarn|\\.proc|\\.pend|\\.fill|\\.align|\\.enc|\\.cpu)\\b'
 		'name': 'keyword.control.kickassc64'
 	},
 	{
@@ -53,8 +53,14 @@
 		'name': 'keyword.other.kickassc64'
 	},
 	{
-	    'begin': '\"'
-	    'end': '\"'
-	    'name': 'string.quoted.double.kickassc64'
+		'begin': '\@+"'
+		'end': '"'
+		'patterns': [
+			{
+				'match': '\\\\.'
+				'name': 'constant.character.escape.untitled'
+			},
+		]
+		'name': 'string.quoted.double.kickassc64'
 	}
 ]
