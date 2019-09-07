@@ -25,15 +25,15 @@
 	    'name': 'variable.kickassc64'
 	},
 	{
-	    'match': '(\\$[0-9a-f]+)'
+	    'match': '(#?\\$[0-9a-f]+)'
 	    'name': 'constant.numeric.kickassc64'
 	},
 	{
-	    'match': '(\\%[0-1]+)'
+	    'match': '(#?\\%[0-1]+)'
 	    'name': 'constant.numeric.kickassc64'
 	},
 	{
-	    'match': '\\b([0-9]+)\\b'
+	    'match': '#?\\b([0-9]+)\\b'
 	    'name': 'constant.numeric.kickassc64'
 	},
 	{
@@ -53,7 +53,7 @@
 		'name': 'keyword.other.kickassc64'
 	},
 	{
-		'begin': '\@+"'
+		'begin': '\@?"'
 		'end': '"'
 		'patterns': [
 			{
